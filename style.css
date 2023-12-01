@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px;
+}
+
 body {
     font-family: 'Nunito Sans', sans-serif;
     padding: 0 16px;
@@ -20,6 +25,11 @@ img {
 .link {
     color: #FFFFFF;
     text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #6608FF;
 }
 
 .list {
@@ -55,7 +65,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .subtitle {
-    margin-bottom: 16px;
+    margin-bottom: clamp(8px, 3vw,16px);
 }
 
 .section {
@@ -93,6 +103,15 @@ h1, h2, h3, h4, h5 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(8px, 1vw,16px);
+}
+
+.prices > .subtitle:not(:first-child) {
+    margin-top: clamp(8px, 2vw, 16px);
+}
+
+.footer {
+    text-align: center;
+    margin-bottom: 32px;
 }
 
 @media (min-width: 1280px) {
